@@ -10,11 +10,11 @@
     "doc": "doc"
   },
   "scripts": {
-    "build": "ember build --environment=production",
+    "build": "ember build -prod -o docs/",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
-    "start": "ember serve"
+    "start": "ember serve -lr false -p 5000"
   },
   "george": {
     "ember-cli-inject-live-reload": "^2.0.2",

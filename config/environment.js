@@ -4,7 +4,7 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'wow-classic-mats-calc',
     environment,
-    rootURL: '/',
+    rootURL: '/wow-classic-mats-calc/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
