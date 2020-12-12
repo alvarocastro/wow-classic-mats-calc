@@ -2,7 +2,9 @@
 
 https://material.io/design/color/the-color-system.html#tools-for-picking-colors
 
- */
+https://wow.zamimg.com/images/wow/tooltip.png
+
+*/
 
 a {
   color: #f8f9fa !important;
@@ -24,11 +26,9 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-/*
-
-https://wow.zamimg.com/images/wow/tooltip.png
-
-*/
+.container.main-container {
+  max-width: 400px;
+}
 
 @import "node_modules/bootstrap/scss/_functions";
 @import "node_modules/bootstrap/scss/_variables";
