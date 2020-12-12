@@ -1,0 +1,37 @@
+<div class="container">
+  <header class="d-flex justify-content-between align-items-center">
+    <h1 class="pt-3 h5">Consumable's Mats Calc</h1>
+    <button type="button" class="btn btn-light btn-sm w-10" {{on "click" this.toggleMode}}>
+      <Icon @name={{if this.isInputMode "config" "calculator"}} />
+    </button>
+  </header>
+
+  <Alert
+    @visible={{this.isWelcomeMessageVisible}}
+    @onDismiss={{this.hideWelcomeMessage}}
+  >
+    <strong>Welcome!</strong> This is a simple calculator to know how many mats you need to gather/buy to get your raid mats crafted! No more going back and forth to Wowhead to check the reagents for each recipe!
+  </Alert>
+
+  <Alert
+    @visible={{this.isHeadsUpMessageVisible}}
+    @onDismiss={{this.hideHeadsUpMessage}}
+  >
+    <strong>Heads-up!</strong> You can press the small cog button up there to set what consumables should display on the list. Every setting will be saved for your next visit!
+  </Alert>
+
+  <CraftablesList
+    @input={{this.isInputMode}}
+    @shopList={{this.shopList}}
+    @onChangeShopList={{this.handleShopListChange}}
+  />
+
+  <MatsList
+    @shopList={{this.shopList}}
+  />
+
+  <p class="text-center text-muted small">
+    <Icon @name="discord"/> Moltar#2857 for any issue/suggestion<br />
+    made by Moltar - US Kirtonos
+  </p>
+</div>

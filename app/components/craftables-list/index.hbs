@@ -1,0 +1,13 @@
+<ul class="list-group pb-3">
+  {{#each this.rows key="item.id" as |row index|}}
+  <CraftablesList::Row
+    @index={{index}}
+    @item={{row.item}}
+    @amount={{row.amount}}
+    @visible={{row.visible}}
+    @input={{@input}}
+    @onInputAmount={{this.setAmount}}
+    @onChangeVisibility={{this.setVisibility}}
+  />
+  {{/each}}
+</ul>
