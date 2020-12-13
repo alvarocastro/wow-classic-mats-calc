@@ -42,7 +42,7 @@ The build result will be in the `/docs` directory.
 
 ## Further Reading / Useful Links
 
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
+* [Ember.js](https://emberjs.com/)
+* [Ember CLI](https://ember-cli.com/)
 * [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 * [Wowhead Power Tooltip](https://classic.wowhead.com/tooltips)
