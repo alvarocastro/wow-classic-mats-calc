@@ -1,7 +1,6 @@
 # wow-classic-mats-calc
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is a simple app to calculate what mats are needed to craft items in World of Warcraft Classic.
 
 ## Prerequisites
 
@@ -9,29 +8,21 @@ You will need the following things properly installed on your computer.
 
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/alvarocastro/wow-classic-mats-calc.git` this repository
 * `cd wow-classic-mats-calc`
 * `npm install`
 
 ## Running / Development
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+* `npm start`
+* Visit your app at [http://localhost:5000](http://localhost:5000).
 
 ### Code Generators
 
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
+Make use of the many generators for code, try `npx ember help generate` for more details
 
 ### Linting
 
@@ -39,14 +30,15 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `npm run lint:js`
 * `npm run lint:js -- --fix`
 
-### Building
+### Building (production)
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+* `npm run build`
+
+The build result will be in the `/docs` directory.
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+* Anything pushed to `master` will be deployed. Github pages will serve the `/docs` directory.
 
 ## Further Reading / Useful Links
 
