@@ -5,7 +5,9 @@ const faIcons = {
   hidden: ['fas', 'eye-slash'],
   calculator: ['fas', 'calculator'],
   discord: ['fab', 'discord'],
-  config: ['fas', 'cog']
+  config: ['fas', 'cog'],
+  columns: ['fas', 'columns'],
+  list: ['fas', 'list']
 };
 
 export default class IconComponent extends Component {

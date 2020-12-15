@@ -25,9 +25,38 @@ a {
   background-color: #343a40;
   border: 1px solid rgba(255, 255, 255, 0.25);
 }
-
 .container.main-container {
   max-width: 400px;
+}
+
+@media (min-width: 768px) {
+  .container.main-container.main-container-layout-cols {
+    max-width: 800px;
+  }
+}
+
+.container.main-container.main-container-layout-list {
+  max-width: 400px;
+}
+
+.btn.btn-sm.list-title-btn {
+  padding: 1px 0.5rem;
+}
+.btn.btn-sm.item-visibility-btn {
+  padding: 1px 0.5rem;
+}
+.form-control.form-control-sm.amount-input {
+  min-height: calc(1.5em + 4px);
+}
+
+.btn.btn-sm.setting-btn {
+  min-width: 40px;
+}
+
+footer .subfooter,
+footer .subfooter a {
+  color: #5a626b !important;
+  text-decoration-style: dashed;
 }
 
 @import "node_modules/bootstrap/scss/_functions";
@@ -40,7 +69,7 @@ a {
 @import "node_modules/bootstrap/scss/_type";
 // @import "node_modules/bootstrap/scss/_images";
 @import "node_modules/bootstrap/scss/_containers";
-// @import "node_modules/bootstrap/scss/_grid";
+@import "node_modules/bootstrap/scss/_grid";
 
 // @import "node_modules/bootstrap/scss/_tables";
 @import "node_modules/bootstrap/scss/_forms";
@@ -67,6 +96,6 @@ a {
 // @import "node_modules/bootstrap/scss/_carousel";
 // @import "node_modules/bootstrap/scss/_spinners";
 
-@import "node_modules/bootstrap/scss/_helpers";
+// @import "node_modules/bootstrap/scss/_helpers";
 
 @import "node_modules/bootstrap/scss/utilities/_api";

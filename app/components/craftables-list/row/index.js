@@ -7,20 +7,20 @@ export default class CraftablesListRowComponent extends Component {
   }
 
   get isHidden () {
-    return this.args.input && !this.args.visible;
+    return this.args.input && this.args.hidden;
   }
 
   @action handleInput (event) {
     const amount = Number(event.target.value);
 
-    this.args.onInputAmount(this.args.item.id, amount);
+    this.args.onInputAmount(amount);
   }
 
   @action hide () {
-    this.args.onChangeVisibility(this.args.item.id, false);
+    this.args.onChangeVisibility(false);
   }
 
   @action show () {
-    this.args.onChangeVisibility(this.args.item.id, true);
+    this.args.onChangeVisibility(true);
   }
 }

@@ -1,7 +1,11 @@
-{{#if @visible}}
-<div class="alert alert-secondary alert-dismissible" role="alert">
+{{#if this.isVisible}}
+<div
+  class="alert alert-{{this.typeClass}} {{if this.isDismissable "alert-dismissible"}}"
+  role="alert"
+  ...attributes
+>
   {{yield}}
-  {{#if @onDismiss}}
+  {{#if this.isDismissable}}
   <button
     {{on "click" @onDismiss}}
     type="button"

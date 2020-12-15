@@ -1,8 +1,8 @@
-<div class="container main-container">
+<div class="container main-container {{if this.isTwoColumns "main-container-layout-cols" "main-container-layout-list"}}">
   <header class="d-flex justify-content-between align-items-center">
     <h1 class="pt-3 h5">Consumable's Mats Calc</h1>
-    <button type="button" class="btn btn-light btn-sm w-10" {{on "click" this.toggleMode}}>
-      <Icon @name={{if this.isInputMode "config" "calculator"}} />
+    <button type="button" class="btn btn-light btn-sm setting-btn d-none d-md-block" {{on "click" this.toggleLayout}}>
+      <Icon @name={{if this.isTwoColumns "columns" "list"}} />
     </button>
   </header>
 
@@ -17,21 +17,33 @@
     @visible={{this.isHeadsUpMessageVisible}}
     @onDismiss={{this.hideHeadsUpMessage}}
   >
-    <strong>Heads-up!</strong> You can press the small cog button up there to set what consumables should display on the list. Every setting will be saved for your next visit!
+    <strong>Heads-up!</strong> Some items are already hidden, just press the small cog button to show/hide what consumables you want to see on the list. Every setting will be saved for your next visits!
   </Alert>
 
-  <CraftablesList
-    @input={{this.isInputMode}}
-    @shopList={{this.shopList}}
-    @onChangeShopList={{this.handleShopListChange}}
-  />
+  <div class="row row-cols-1 {{if this.isTwoColumns "row-cols-md-2"}}">
+    <div class="col mb-3">
+      <CraftablesList
+        @craftables={{this.craftables}}
+        @onChangeCraftables={{this.handleCraftablesChange}}
+      />
+    </div>
 
-  <MatsList
-    @shopList={{this.shopList}}
-  />
+    <div class="col mb-3">
+      <ReagentsList
+        @shopList={{this.shopList}}
+      />
+    </div>
+  </div>
 
-  <p class="text-center text-muted small">
-    made by Moltar - US Kirtonos<br />
-    <Icon @name="discord"/> Moltar#2857 for any issue/suggestion
-  </p>
+  <footer class="text-center small mb-3">
+    <p class="text-muted m-0">
+      made by Moltar - US Kirtonos
+    </p>
+    <p class="text-muted mb-0">
+      <Icon @name="discord"/> Moltar#2857 for any issue/suggestion
+    </p>
+    <p class="text-center subfooter small mb-0 mt-2">
+      <a href="#" {{on "click" this.clearData}}>Clear stored data</a> | Version {{app-version versionOnly=true}}
+    </p>
+  </footer>
 </div>

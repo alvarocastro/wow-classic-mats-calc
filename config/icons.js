@@ -4,7 +4,9 @@ module.exports = function () {
       'eye',
       'eye-slash',
       'calculator',
-      'cog'
+      'cog',
+      'columns',
+      'list'
     ],
     'free-brands-svg-icons': [
       'discord'
