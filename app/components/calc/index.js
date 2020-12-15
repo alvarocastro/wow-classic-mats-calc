@@ -2,6 +2,7 @@ import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import store from 'store2';
+import config from 'wow-classic-mats-calc/config/environment';
 import craftables from 'wow-classic-mats-calc/data';
 
 class ShopList {
@@ -75,10 +76,9 @@ export default class CalcComponent extends Component {
     const ans = confirm('You are about to reset all the settings stored by the tool. Are you sure?');
 
     event.preventDefault();
-
     if (ans) {
       store.clear();
-      window.location = '/';
+      window.location = config.rootURL;
     }
   }
 }
