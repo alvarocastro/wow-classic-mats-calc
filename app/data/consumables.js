@@ -70,6 +70,11 @@ export default {
     { reagent: reagents.bruiseweed, amount: 1 },
     { reagent: reagents.leadedVial, amount: 1 }
   ]),
+  restorativePotion: new Consumable(9030, 'Restorative Potion', sources.alchemy, [
+    { reagent: reagents.elementalEarth, amount: 1 },
+    { reagent: reagents.goldthorn, amount: 1 },
+    { reagent: reagents.crystalVial, amount: 1 }
+  ]),
   antiVenom: new Consumable(6452, 'Anti-Venom', sources.firstaid, [
     { reagent: reagents.smallVenomSac, amount: 1 }
   ]),

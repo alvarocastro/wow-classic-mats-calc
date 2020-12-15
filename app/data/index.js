@@ -60,6 +60,7 @@ export default [
 
   // Poison cures
   new Craftable(consumables.elixirOfPoisonResistance, 0, { hidden: false }),
+  new Craftable(consumables.restorativePotion, 0, { hidden: true }),
   new Craftable(consumables.antiVenom, 0, { hidden: true }),
   new Craftable(consumables.strongAntiVenom, 0, { hidden: true }),
   new Craftable(consumables.powerfulAntiVenom, 0, { hidden: true }),
