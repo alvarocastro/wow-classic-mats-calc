@@ -26,7 +26,7 @@ class ShopList {
 
 export default class CalcComponent extends Component {
   @tracked shopList = [];
-  @tracked isTwoColumns = store.get('twoColumns') ?? false;
+  @tracked isTwoColumns = store.get('twoColumns') ?? true;
 
   craftables = craftables;
 
