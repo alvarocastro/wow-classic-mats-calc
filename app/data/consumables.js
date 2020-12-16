@@ -330,4 +330,8 @@ export default {
     { reagent: reagents.vultureGizzard, amount: 2 },
     { reagent: reagents.blastedBoarLung, amount: 1 },
   ]),
+  cerebralCortexCompound: new Consumable(8423, 'Cerebral Cortex Compound', sources.quest, [
+    { reagent: reagents.basiliskBrain, amount: 10 },
+    { reagent: reagents.vultureGizzard, amount: 2 },
+  ]),
 };

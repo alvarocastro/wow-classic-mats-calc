@@ -130,4 +130,5 @@ export default [
   new Craftable(consumables.roids, 0, { hidden: true }),
   new Craftable(consumables.lungJuiceCocktail, 0, { hidden: true }),
   new Craftable(consumables.groundScorpokAssay, 0, { hidden: true }),
+  new Craftable(consumables.cerebralCortexCompound, 0, { hidden: true }),
 ];
