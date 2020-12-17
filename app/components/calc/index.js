@@ -1,6 +1,7 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
+import { inject as service } from '@ember/service';
 import store from 'store2';
 import config from 'wow-classic-mats-calc/config/environment';
 import craftables from 'wow-classic-mats-calc/data';
@@ -25,13 +26,12 @@ class ShopList {
 }
 
 export default class CalcComponent extends Component {
+  @service tracking;
   @tracked shopList = [];
   @tracked isTwoColumns = store.get('twoColumns') ?? true;
-
-  craftables = craftables;
-
   @tracked isWelcomeMessageVisible = store.get('welcomeMessage') ?? true;
   @tracked isHeadsUpMessageVisible = store.get('headsUpMessage') ?? false;
+  craftables = craftables;
 
   constructor () {
     super(...arguments);
@@ -60,16 +60,23 @@ export default class CalcComponent extends Component {
 
     store.set('welcomeMessage', false);
     store.set('headsUpMessage', true);
+    this.tracking.trackHideWelcomeMessage();
   }
 
   @action hideHeadsUpMessage () {
     this.isHeadsUpMessageVisible = false;
     store.set('headsUpMessage', false);
+    this.tracking.trackHideHeadsUpMessage();
   }
 
   @action toggleLayout () {
     this.isTwoColumns = !this.isTwoColumns;
     store.set('twoColumns', this.isTwoColumns);
+    if (this.isTwoColumns) {
+      this.tracking.trackUseTwoColumnsLayout();
+    } else {
+      this.tracking.trackUseOneColumnLayout();
+    }
   }
 
   @action clearData (event) {
@@ -77,6 +84,7 @@ export default class CalcComponent extends Component {
 
     event.preventDefault();
     if (ans) {
+      this.tracking.trackClearData();
       store.clear();
       window.location = config.rootURL;
     }
