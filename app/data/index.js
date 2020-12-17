@@ -1,7 +1,6 @@
 import { tracked } from '@glimmer/tracking';
 import store from 'store2';
 import consumables from 'wow-classic-mats-calc/data/consumables';
-import reagents from 'wow-classic-mats-calc/data/reagents';
 
 class Craftable {
   @tracked amount;

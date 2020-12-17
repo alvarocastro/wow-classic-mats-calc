@@ -6,7 +6,9 @@ import { debounce } from '@ember/runloop';
 const refreshWowheadLinks = function () {
   try {
     $WowheadPower.refreshLinks();
-  } catch (e) {}
+  } catch (e) {
+    // Fail silently
+  }
 };
 
 export default class ItemLinkComponent extends Component {
