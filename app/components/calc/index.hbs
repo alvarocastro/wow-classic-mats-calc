@@ -1,6 +1,6 @@
 <div class="container main-container {{if this.isTwoColumns "main-container-layout-cols" "main-container-layout-list"}}">
   <header class="d-flex justify-content-between align-items-center">
-    <h1 class="pt-3 h5">Consumable's Mats Calc</h1>
+    <h1 class="pt-3 h5">WoW Classic Mats Calc</h1>
     <button type="button" class="btn btn-light btn-sm setting-btn d-none d-md-block" {{on "click" this.toggleLayout}}>
       <Icon @name={{if this.isTwoColumns "columns" "list"}} />
     </button>
@@ -20,7 +20,13 @@
     <strong>Heads-up!</strong> Some items are already hidden, just press the <Icon @name="config" /> button to select what consumables you want to see on the list. Every setting will be saved for your next visits!
   </Alert>
 
-  <iframe class="ad mb-3" data-aa="1559179" src="//acceptable.a-ads.com/1559179" scrolling="no" allowtransparency="true" title="ad"></iframe>
+  <div class="mb-3 text-center">
+    <a href="https://alvarocastro.github.io/wow-tbc-classic-mats-calc" target="blank" class="other-link">
+      Calc for TBC Classic released!
+    </a>
+  </div>
+
+  <iframe class="ad mb-3" data-aa="1559179" src="//acceptable.a-ads.com/1559179?size=Adaptive&background_color=2d3238&text_color=f8f9fa&title_color=e7f3ff&title_hover_color=5c80bc&link_color=e7f3ff&link_hover_color=5c80bc" scrolling="no" allowtransparency="true" title="ad"></iframe>
 
   <div class="row row-cols-1 {{if this.isTwoColumns "row-cols-md-2"}}">
     <div class="col mb-3">
